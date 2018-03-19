@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07A9CBD8-54FE-49A8-8831-205929C293C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GJD</RootNamespace>
+    <AssemblyName>GJD</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cti.Hardware.Extension, Version=2.2.24.16179, Culture=neutral, PublicKeyToken=276729a7e28b1021, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Cti.Hardware.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="Cti.Hardware.ScanDevice, Version=2.2.24.16179, Culture=neutral, PublicKeyToken=e3df6aab111e7b16, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Cti.Hardware.ScanDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="Cti.Hardware.ScanDevice.Base, Version=2.2.24.16179, Culture=neutral, PublicKeyToken=ac4cc563d3988fba, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Cti.Hardware.ScanDevice.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Cti.Hardware.ScanDevice.EC1000, Version=2.2.24.16179, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Cti.Hardware.ScanDevice.EC1000.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArcInsertDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArcInsertDialog.Designer.cs">
+      <DependentUpon>ArcInsertDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircleInsertDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CircleInsertDialog.Designer.cs">
+      <DependentUpon>CircleInsertDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cuttercompensationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuttercompensationDialog.Designer.cs">
+      <DependentUpon>cuttercompensationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CvMeasure.cs" />
+    <Compile Include="Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database.Designer.cs">
+      <DependentUpon>Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device.cs" />
+    <Compile Include="FileSerializeHelper.cs" />
+    <Compile Include="LineInsertingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineInsertingDialog.Designer.cs">
+      <DependentUpon>LineInsertingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MachResultsCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MachResultsCao.Designer.cs">
+      <DependentUpon>MachResultsCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MachResultsPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MachResultsPower.Designer.cs">
+      <DependentUpon>MachResultsPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoveShapeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveShapeDialog.Designer.cs">
+      <DependentUpon>MoveShapeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="RectangleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RectangleDialog.Designer.cs">
+      <DependentUpon>RectangleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RotationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RotationDialog.Designer.cs">
+      <DependentUpon>RotationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScaleDialog.Designer.cs">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner.designer.cs">
+      <DependentUpon>Scanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanningHelper.cs" />
+    <Compile Include="Sen840D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sen840D.Designer.cs">
+      <DependentUpon>Sen840D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laser.Designer.cs">
+      <DependentUpon>Laser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MachParas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MachParas.Designer.cs">
+      <DependentUpon>MachParas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersSet.Designer.cs">
+      <DependentUpon>ParametersSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetOffseDialogt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetOffseDialogt.Designer.cs">
+      <DependentUpon>SetOffseDialogt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShapeCreateHelper.cs" />
+    <EmbeddedResource Include="ArcInsertDialog.resx">
+      <DependentUpon>ArcInsertDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircleInsertDialog.resx">
+      <DependentUpon>CircleInsertDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuttercompensationDialog.resx">
+      <DependentUpon>cuttercompensationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database.resx">
+      <DependentUpon>Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laser.resx">
+      <DependentUpon>Laser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineInsertingDialog.resx">
+      <DependentUpon>LineInsertingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachParas.resx">
+      <DependentUpon>MachParas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachResultsCao.resx">
+      <DependentUpon>MachResultsCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachResultsPower.resx">
+      <DependentUpon>MachResultsPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveShapeDialog.resx">
+      <DependentUpon>MoveShapeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RectangleDialog.resx">
+      <DependentUpon>RectangleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RotationDialog.resx">
+      <DependentUpon>RotationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner.resx">
+      <DependentUpon>Scanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sen840D.resx">
+      <DependentUpon>Sen840D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersSet.resx">
+      <DependentUpon>ParametersSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SetOffseDialogt.resx">
+      <DependentUpon>SetOffseDialogt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\CVPos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="data\Parameters.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

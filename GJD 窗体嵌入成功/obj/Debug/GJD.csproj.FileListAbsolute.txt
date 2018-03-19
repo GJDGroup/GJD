@@ -1,0 +1,230 @@
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.Form2.resources
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GJD.Form1.resources
+E:\blog\NewGjdMdi\GJD\GJD\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\GJD\GJD\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\GJD\GJD\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.Form2.resources
+E:\blog\NewGjdMdi\GJD\GJD\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20171120GJD\GJD\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171120GJD\GJD\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171120GJD\GJD\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.Form2.resources
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20171120GJD\GJD\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20171127GJD\GJD\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171127GJD\GJD\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171127GJD\GJD\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.Form2.resources
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20171127GJD\GJD\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20171128\GJD\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171128\GJD\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171128\GJD\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.MachResultsCao.resources
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.MachResultsPower.resources
+E:\blog\NewGjdMdi\20171128\GJD\obj\Debug\GJD.Database.resources
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.Database.resources
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.MachResultsCao.resources
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.MachResultsPower.resources
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\振镜新版.exe
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Cti.Hardware.Extension.dll
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Cti.Hardware.ScanDevice.dll
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Cti.Hardware.ScanDevice.Base.dll
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Gsi.Framework.dll
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Gsi.Conversion.Files.dll
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Cti.Hardware.ScanDevice.ScanInterface.dll
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\振镜新版.pdb
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Cti.Hardware.Extension.xml
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Cti.Hardware.ScanDevice.xml
+E:\blog\NewGjdMdi\20171201\GJD\bin\Debug\Cti.Hardware.ScanDevice.Base.xml
+E:\blog\NewGjdMdi\20171201\GJD\obj\Debug\GJD.MachPrograms.resources
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\振镜新版.exe
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\Cti.Hardware.Extension.dll
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\Cti.Hardware.ScanDevice.dll
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\Cti.Hardware.ScanDevice.Base.dll
+E:\blog\NewGjdMdi\20180115\GJD\bin\Debug\振镜新版.pdb
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.Database.resources
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180115\GJD\obj\Debug\GJD.Sen840D.resources
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.Extension.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.ScanDevice.Base.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.ScanDevice.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.ScanDevice.EC1000.dll
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.Database.resources
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.Sen840D.resources
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.ParametersSet.resources
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Gsi.Framework.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Gsi.Conversion.Files.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.ScanDevice.ScanInterface.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Session.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.FTPClient.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Broadcast.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.CommonLib.dll
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.Extension.xml
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.ScanDevice.xml
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\Cti.Hardware.ScanDevice.Base.xml
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\振镜新版.exe
+E:\blog\NewGjdMdi\20180312\GJD\bin\Debug\振镜新版.pdb
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.ArcInsertDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.CircleInsertDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.cuttercompensationDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.Database.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.LineInsertingDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.MachResultsCao.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.MachResultsPower.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.MoveShapeDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.ScaleDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.Scanner.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.Sen840D.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.ParametersSet.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Gsi.Framework.dll
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Gsi.Conversion.Files.dll
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.Hardware.ScanDevice.ScanInterface.dll
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.Session.dll
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.FTPClient.dll
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.Broadcast.dll
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.CommonLib.dll
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.Hardware.Extension.xml
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.Hardware.ScanDevice.xml
+E:\blog\NewGjdMdi\20180312\GJD 测试\bin\Debug\Cti.Hardware.ScanDevice.Base.xml
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.RectangleDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.RotationDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD 测试\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.ArcInsertDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.CircleInsertDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.cuttercompensationDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.Database.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.LineInsertingDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.MachResultsCao.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.MachResultsPower.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.MoveShapeDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.RectangleDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.RotationDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.ScaleDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.Sen840D.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.ParametersSet.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.SetOffseDialogt.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.Scanner.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\obj\Debug\GJD.csprojResolveAssemblyReference.cache
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Gsi.Framework.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Gsi.Conversion.Files.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.Hardware.ScanDevice.ScanInterface.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.Session.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.FTPClient.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.Broadcast.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.CommonLib.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.Hardware.Extension.xml
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.Hardware.ScanDevice.xml
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入测试\bin\Debug\Cti.Hardware.ScanDevice.Base.xml
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\bin\Debug\GJD.exe.config
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\bin\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\bin\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.ArcInsertDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.CircleInsertDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.cuttercompensationDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.Database.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.Laser.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.LineInsertingDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.MachResultsCao.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.MachResultsPower.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.mainForm.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.MoveShapeDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.RectangleDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.RotationDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.ScaleDialog.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.Scanner.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.Sen840D.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.ParametersSet.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.Properties.Resources.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.SetOffseDialogt.resources
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.csproj.GenerateResource.Cache
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\bin\Debug\Gsi.Framework.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\bin\Debug\Cti.Hardware.ScanDevice.ScanInterface.dll
+E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.csprojResolveAssemblyReference.cache

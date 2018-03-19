@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GJD>
+  <cvpos>
+  <cvpos1>0,0,0,0,0</cvpos1>
+  <cvpos2>0,0,0,0,0</cvpos2>
+  <cvpos3>0,0,0,0,0</cvpos3>
+</cvpos>
+  <recvpos>
+    <cvpos1>0,0,0,0,0</cvpos1>
+    <cvpos2>0,0,0,0,0</cvpos2>
+    <cvpos3>0,0,0,0,0</cvpos3>
+  </recvpos>
+  <ref>0,0,0,0,0</ref>
+</GJD>

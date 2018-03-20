@@ -50,7 +50,7 @@ namespace GJD
         private void mainForm_Load(object sender, EventArgs e)
         {
             //一次性创建所有窗体
-            string[] formClass = { "GJD.MachParas", "GJD.Scanner", "GJD.Laser", "GJD.Sen840D", "GJD.Database", " GJD.ParametersSet" };
+            string[] formClass = { "GJD.MachParas", "GJD.Scanner", "GJD.Laser", "GJD.Sen840D", "GJD.Database", " GJD.ParametersSet", "GJD.MachResults" };
             for (int i = 0; i < formClass.Length; i++)
             {
                 GenerateForm(formClass[i], i);
@@ -108,7 +108,7 @@ namespace GJD
                     this.panel1.Controls.Add(formlist[0]);
                     formlist[0].Show();
                     break;
-                case "系统参数":
+                case "工艺参数":
                     this.panel1.Controls.Clear();
                     this.panel1.Controls.Add(formlist[5]);
                     formlist[5].Show();
@@ -134,15 +134,15 @@ namespace GJD
                     break;
                 case "结果显示":
                     this.panel1.Controls.Clear();
-                    this.panel1.Controls.Add(formlist[0]);
-                    formlist[0].Show();
+                    this.panel1.Controls.Add(formlist[6]);
+                    formlist[6].Show();
                     break;
                 case "工艺数据库":
                     this.panel1.Controls.Clear();
                     this.panel1.Controls.Add(formlist[4]);
                     formlist[4].Show();
                     break;
-                case "运行":
+                case "开始加工":
                     menuFoldclose();
                     this.panel1.Controls.Clear();
                     this.panel1.Controls.Add(formlist[0]);
@@ -150,10 +150,14 @@ namespace GJD
                     buttonrun.Enabled = false;
                     initmain();
                     break;
-                case "停止":
-                    this.panel1.Controls.Clear();
-                    this.panel1.Controls.Add(formlist[0]);
-                    formlist[0].Show();
+                case "暂停加工":                   
+                    cuttentpause = currentstatus;
+                    currentstatus = "stop";
+                    buttonrun.Enabled = true;
+                    break;
+                case "继续加工":                    
+                    currentstatus = cuttentpause;
+                    buttonrun.Enabled = true;
                     break;
                 default:
                     break;
@@ -245,6 +249,7 @@ namespace GJD
         IScan iscan { get; set; }
        //当前加工状态
         string currentstatus;
+        string cuttentpause;
         #endregion
 
         #region 控制逻辑
@@ -579,6 +584,8 @@ namespace GJD
             i840d =formlist[3] as I840D;
             iscan =formlist[1] as IScan;
             iMachParahandle =formlist[0] as IMachParahandle;
+            cvCountotal = 0;
+            recvCountotal = 0;
             CV840Dmotion();
             timermain.Enabled = true;
             timersub.Enabled = true;
@@ -628,6 +635,7 @@ namespace GJD
             }
         }
         #endregion        
+      
     }
 }
 

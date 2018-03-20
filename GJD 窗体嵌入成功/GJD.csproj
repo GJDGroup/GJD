@@ -95,11 +95,11 @@
     <Compile Include="LineInsertingDialog.Designer.cs">
       <DependentUpon>LineInsertingDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="MachResultsCao.cs">
+    <Compile Include="MachResults.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MachResultsCao.Designer.cs">
-      <DependentUpon>MachResultsCao.cs</DependentUpon>
+    <Compile Include="MachResults.Designer.cs">
+      <DependentUpon>MachResults.cs</DependentUpon>
     </Compile>
     <Compile Include="MachResultsPower.cs">
       <SubType>Form</SubType>
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="MachParas.resx">
       <DependentUpon>MachParas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MachResultsCao.resx">
-      <DependentUpon>MachResultsCao.cs</DependentUpon>
+    <EmbeddedResource Include="MachResults.resx">
+      <DependentUpon>MachResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MachResultsPower.resx">
       <DependentUpon>MachResultsPower.cs</DependentUpon>

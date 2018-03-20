@@ -1,10 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <GJD>
   <Simens840D>
+    <currentPosx>0</currentPosx>>
+    <currentPosy>0</currentPosy>>
+    <currentPosz>0</currentPosz>>
+    <currentPosa>0</currentPosa>>
+    <currentPosb>0</currentPosb>>
+    <TargetPosx>0</TargetPosx>>
+    <TargetPosy>0</TargetPosy>>
+    <TargetPosz>0</TargetPosz>>
+    <TargetPosa>0</TargetPosa>>
+    <Speedb>0</Speedb>>
+    <Speedx>0</Speedx>>
+    <Speedy>0</Speedy>>
+    <Speedz>0</Speedz>>
+    <Speeda>0</Speeda>>
+    <Speedb>0</Speedb>>
   </Simens840D>
   <Laser>
+    <power>0</power>
+    <frequencyset>0</frequencyset>
+    <frequencyact>0</frequencyact>
   </Laser>
   <Scanner>
-    <scanprofiledraw>1</scanprofiledraw>
+    <scanspeed>0</scanspeed>
+    <scancount>1</scancount>
+    <scanR>0</scanR>
+    <focusdis>1</focusdis>
+    <focusdep>1</focusdep>
   </Scanner>
 </GJD>

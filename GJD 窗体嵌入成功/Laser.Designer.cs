@@ -42,6 +42,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labPower = new System.Windows.Forms.Label();
             this.labInterGateFre = new System.Windows.Forms.Label();
@@ -69,9 +71,9 @@
             this.textPowerReguPercent = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.texLaserStatus = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.butInfoClear = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -97,7 +99,7 @@
             this.butLaserOn.Name = "butLaserOn";
             this.butLaserOn.Size = new System.Drawing.Size(130, 40);
             this.butLaserOn.TabIndex = 0;
-            this.butLaserOn.Text = "Laser On";
+            this.butLaserOn.Text = "激光器开";
             this.butLaserOn.UseVisualStyleBackColor = false;
             this.butLaserOn.Click += new System.EventHandler(this.butLaserOn_Click);
             // 
@@ -115,7 +117,7 @@
             this.butLaserClose.Name = "butLaserClose";
             this.butLaserClose.Size = new System.Drawing.Size(130, 40);
             this.butLaserClose.TabIndex = 0;
-            this.butLaserClose.Text = "Laser Off";
+            this.butLaserClose.Text = "激光器关";
             this.butLaserClose.UseVisualStyleBackColor = false;
             this.butLaserClose.Click += new System.EventHandler(this.butLaserClose_Click);
             // 
@@ -126,9 +128,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(99, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 40);
+            this.label1.Size = new System.Drawing.Size(109, 40);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Laser1:";
+            this.label1.Text = "激光1:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1
@@ -173,9 +175,9 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(99, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 40);
+            this.label4.Size = new System.Drawing.Size(109, 40);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Laser2:";
+            this.label4.Text = "激光2:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -187,7 +189,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 40);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Trigger:";
+            this.label5.Text = "触发方式:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -199,7 +201,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 31);
             this.label7.TabIndex = 8;
-            this.label7.Text = "Current1:";
+            this.label7.Text = "电流1:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -211,7 +213,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 28);
             this.label8.TabIndex = 9;
-            this.label8.Text = "Current2:";
+            this.label8.Text = "电流2:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox2
@@ -230,6 +232,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -240,7 +244,31 @@
             this.groupBox1.Size = new System.Drawing.Size(1118, 70);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Current";
+            this.groupBox1.Text = "电流";
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label10.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(846, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 31);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "A";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(494, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 31);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "A";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -250,7 +278,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 40);
             this.label9.TabIndex = 11;
-            this.label9.Text = "Power:";
+            this.label9.Text = "功率:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labPower
@@ -293,11 +321,11 @@
             this.label13.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label13.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(492, 25);
+            this.label13.Location = new System.Drawing.Point(467, 30);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 40);
+            this.label13.Size = new System.Drawing.Size(132, 40);
             this.label13.TabIndex = 13;
-            this.label13.Text = "Internal Gate:";
+            this.label13.Text = "内部门频率:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -305,11 +333,11 @@
             this.label14.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label14.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(492, 80);
+            this.label14.Location = new System.Drawing.Point(467, 80);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 40);
+            this.label14.Size = new System.Drawing.Size(136, 40);
             this.label14.TabIndex = 16;
-            this.label14.Text = "Pulse Rate:";
+            this.label14.Text = "最大脉冲频率:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labPulseRate
@@ -321,7 +349,7 @@
             this.labPulseRate.Name = "labPulseRate";
             this.labPulseRate.Size = new System.Drawing.Size(100, 40);
             this.labPulseRate.TabIndex = 18;
-            this.labPulseRate.Text = "300.51k";
+            this.labPulseRate.Text = "2M";
             this.labPulseRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
@@ -358,7 +386,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1125, 138);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Display";
+            this.groupBox2.Text = "参数显示";
             // 
             // labTrigger
             // 
@@ -369,7 +397,7 @@
             this.labTrigger.Name = "labTrigger";
             this.labTrigger.Size = new System.Drawing.Size(107, 40);
             this.labTrigger.TabIndex = 20;
-            this.labTrigger.Text = "Intermal";
+            this.labTrigger.Text = "内部触发";
             this.labTrigger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox3
@@ -384,7 +412,7 @@
             this.groupBox3.Size = new System.Drawing.Size(1118, 70);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Trigger";
+            this.groupBox3.Text = "触发方式";
             // 
             // checkBoxExternal
             // 
@@ -393,7 +421,7 @@
             this.checkBoxExternal.Name = "checkBoxExternal";
             this.checkBoxExternal.Size = new System.Drawing.Size(122, 31);
             this.checkBoxExternal.TabIndex = 11;
-            this.checkBoxExternal.Text = "External";
+            this.checkBoxExternal.Text = "外部触发";
             this.checkBoxExternal.UseVisualStyleBackColor = true;
             this.checkBoxExternal.CheckedChanged += new System.EventHandler(this.checkBoxExternal_CheckedChanged);
             // 
@@ -406,7 +434,7 @@
             this.checkBoxInternal.Name = "checkBoxInternal";
             this.checkBoxInternal.Size = new System.Drawing.Size(122, 31);
             this.checkBoxInternal.TabIndex = 10;
-            this.checkBoxInternal.Text = "Internal";
+            this.checkBoxInternal.Text = "内部触发";
             this.checkBoxInternal.UseVisualStyleBackColor = true;
             this.checkBoxInternal.CheckedChanged += new System.EventHandler(this.checkBoxInternal_CheckedChanged);
             // 
@@ -426,7 +454,7 @@
             this.groupBox4.Size = new System.Drawing.Size(1118, 70);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Frequency";
+            this.groupBox4.Text = "频率";
             // 
             // label20
             // 
@@ -459,7 +487,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(152, 31);
             this.label19.TabIndex = 10;
-            this.label19.Text = "f-Pulse rate:";
+            this.label19.Text = "最大脉冲频率:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textInterGateFre
@@ -482,7 +510,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(195, 31);
             this.label18.TabIndex = 8;
-            this.label18.Text = "f-Internal gate:";
+            this.label18.Text = "内部门频率:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox4
@@ -494,7 +522,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 28);
             this.textBox4.TabIndex = 1;
-            this.textBox4.Text = "1M";
+            this.textBox4.Text = "2M";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
@@ -505,7 +533,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 40);
             this.button1.TabIndex = 20;
-            this.button1.Text = "Activate";
+            this.button1.Text = "参数激活";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnActivate_Click);
             // 
@@ -517,7 +545,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 40);
             this.button2.TabIndex = 21;
-            this.button2.Text = "Deactivate";
+            this.button2.Text = "参数失效";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // groupBox5
@@ -533,7 +561,7 @@
             this.groupBox5.Size = new System.Drawing.Size(1118, 70);
             this.groupBox5.TabIndex = 23;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Regulator";
+            this.groupBox5.Text = "调制";
             // 
             // label22
             // 
@@ -566,15 +594,15 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(195, 31);
             this.label24.TabIndex = 8;
-            this.label24.Text = "Power Regulator:";
+            this.label24.Text = "功率:";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.groupBox6.Controls.Add(this.button3);
             this.groupBox6.Controls.Add(this.groupBox9);
-            this.groupBox6.Controls.Add(this.button6);
             this.groupBox6.Controls.Add(this.button5);
             this.groupBox6.Controls.Add(this.butInfoClear);
             this.groupBox6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -583,7 +611,18 @@
             this.groupBox6.Size = new System.Drawing.Size(1118, 263);
             this.groupBox6.TabIndex = 24;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "System";
+            this.groupBox6.Text = "系统控制";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.Location = new System.Drawing.Point(915, 198);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 40);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "重置";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // groupBox9
             // 
@@ -594,47 +633,37 @@
             this.groupBox9.Size = new System.Drawing.Size(718, 238);
             this.groupBox9.TabIndex = 28;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Info";
+            this.groupBox9.Text = "状态信息";
             // 
             // texLaserStatus
             // 
-            this.texLaserStatus.Location = new System.Drawing.Point(6, 16);
+            this.texLaserStatus.Location = new System.Drawing.Point(6, 24);
             this.texLaserStatus.Multiline = true;
             this.texLaserStatus.Name = "texLaserStatus";
             this.texLaserStatus.Size = new System.Drawing.Size(697, 205);
             this.texLaserStatus.TabIndex = 25;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(915, 190);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 40);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "Save Setting";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.Location = new System.Drawing.Point(915, 108);
+            this.button5.Location = new System.Drawing.Point(915, 33);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 40);
             this.button5.TabIndex = 26;
-            this.button5.Text = "Reset";
+            this.button5.Text = "读取错误";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.buterrorRead);
             // 
             // butInfoClear
             // 
             this.butInfoClear.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.butInfoClear.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butInfoClear.Location = new System.Drawing.Point(915, 26);
+            this.butInfoClear.Location = new System.Drawing.Point(915, 112);
             this.butInfoClear.Name = "butInfoClear";
             this.butInfoClear.Size = new System.Drawing.Size(150, 40);
             this.butInfoClear.TabIndex = 24;
-            this.butInfoClear.Text = "Clear Info";
+            this.butInfoClear.Text = "清除错误";
             this.butInfoClear.UseVisualStyleBackColor = false;
             this.butInfoClear.Click += new System.EventHandler(this.butInfoClear_Click);
             // 
@@ -653,7 +682,7 @@
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
             this.groupBox7.Tag = "";
-            this.groupBox7.Text = "Parameter Setting";
+            this.groupBox7.Text = "参数设置";
             // 
             // groupBox8
             // 
@@ -669,7 +698,7 @@
             this.groupBox8.Size = new System.Drawing.Size(1125, 98);
             this.groupBox8.TabIndex = 26;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Control";
+            this.groupBox8.Text = "激光器控制";
             // 
             // textBox6
             // 
@@ -755,10 +784,12 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox texLaserStatus;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button butInfoClear;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }

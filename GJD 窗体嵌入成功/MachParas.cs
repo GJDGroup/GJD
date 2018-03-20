@@ -100,5 +100,12 @@ namespace GJD
         {
             richmessagebox.Text = textmedium;
         }
+
+        private void richmessagebox_TextChanged(object sender, EventArgs e)
+        {
+            richmessagebox.SelectionStart = richmessagebox.Text.Length;
+            richmessagebox.SelectionLength = 0;
+            richmessagebox.Focus();
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GJD
 {
-    public partial class MachResultsCao : Form
+    public partial class MachResults : Form
     {
-        public MachResultsCao()
+        public MachResults()
         {
             InitializeComponent();
         }

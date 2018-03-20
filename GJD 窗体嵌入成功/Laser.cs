@@ -68,7 +68,7 @@ namespace GJD
             }
             catch
             {
-                texLaserStatus.Text = "Laser on fail\n";
+                texLaserStatus.Text = "激光器打开成功\n";
             }
             laserHasOn = true;
         }
@@ -80,7 +80,7 @@ namespace GJD
             }
             catch
             {
-                texLaserStatus.Text = "Laser close fail\n";
+                texLaserStatus.Text = "激光器关闭成功\n";
             }
         }
 
@@ -100,7 +100,7 @@ namespace GJD
             }
             catch
             {
-                texLaserStatus.Text = "PowerPercent activate fail\n";
+                texLaserStatus.Text = "功率设置失败\n";
             }
             //Intarnal Gate Frequency
             try
@@ -121,7 +121,7 @@ namespace GJD
             }
             catch
             {
-                texLaserStatus.Text = "InterGateFrequent activate fail\n";
+                texLaserStatus.Text = "频率设置失败\n";
             }
         }
         //复选框限制
@@ -133,14 +133,14 @@ namespace GJD
             }
             if (checkBoxInternal.Checked)
             {
-                labTrigger.Text = "Internal";
+                labTrigger.Text = "内部触发";
                 try
                 {
                     laserserialPort.WriteLine("w71 4\r");
                 }
                 catch
                 {
-                    texLaserStatus.Text = "Internal Trigger fail\n";
+                    texLaserStatus.Text = "设置内部触发失败\n";
                 }
             }
         }
@@ -152,14 +152,14 @@ namespace GJD
             }
             if (checkBoxExternal.Checked)
             {
-                labTrigger.Text = "External";
+                labTrigger.Text = "外部触发";
                 try
                 {
                     laserserialPort.WriteLine("w71 1\r");
                 }
                 catch
                 {
-                    texLaserStatus.Text = "EXternal Trigger fail\n";
+                    texLaserStatus.Text = "设置外部触发失败\n";
                 }
             }
         }
@@ -167,6 +167,15 @@ namespace GJD
         {
             statusText = null;
             texLaserStatus.Text = statusText;
+            try
+            {
+                laserserialPort.WriteLine("w97 101\r");
+            }
+            catch
+            {
+                texLaserStatus.Text = "清除错误失败\n";
+            }
+
         }
         //串口数据反馈
         private void laserserialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
@@ -180,6 +189,20 @@ namespace GJD
                 this.texLaserStatus.Text = statusText;
             };
             Invoke(action, backRespond);
+        }
+
+        private void buterrorRead(object sender, EventArgs e)
+        {
+            statusText = null;
+            texLaserStatus.Text = statusText;
+            try
+            {
+                laserserialPort.WriteLine("r90 101\r");
+            }
+            catch
+            {
+                texLaserStatus.Text = "失败读取失败\n";
+            }
         }
 
     }

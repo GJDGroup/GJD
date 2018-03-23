@@ -22,9 +22,9 @@ namespace GJD
     }
     public partial class Laser : Form, Ilaser
     {
-        public static bool laserHasOn = false;
-        public static bool lasercHaslose = false;
-        public static bool laserHasinit = false;
+        public static int laserHasOn = 0;
+        public static int lasercHaslose = 0;
+        public static int laserHasinit = 0;
         static string statusText = null;
         //临时延时函数
         public void delay(int i)
@@ -47,7 +47,7 @@ namespace GJD
                     laserserialPort.Open();                    
                 }
                 CheckForIllegalCrossThreadCalls = false;
-                laserHasinit = true;
+                laserHasinit = 2;
             }
             catch (Exception ex)
             {
@@ -70,13 +70,14 @@ namespace GJD
             {
                 texLaserStatus.Text = "激光器打开成功\n";
             }
-            laserHasOn = true;
+            laserHasOn = 2;
         }
         public void LaserClose()
         {
             try
             {
                 laserserialPort.WriteLine("w60 0\r");
+                lasercHaslose = 2;
             }
             catch
             {

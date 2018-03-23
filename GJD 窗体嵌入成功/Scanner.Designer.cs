@@ -162,9 +162,9 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(729, 0);
+            this.panel1.Location = new System.Drawing.Point(631, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 821);
+            this.panel1.Size = new System.Drawing.Size(314, 610);
             this.panel1.TabIndex = 0;
             // 
             // panel7
@@ -174,7 +174,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(314, 326);
+            this.panel7.Size = new System.Drawing.Size(314, 115);
             this.panel7.TabIndex = 2;
             // 
             // label7
@@ -201,7 +201,7 @@
             this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 326);
+            this.panel4.Location = new System.Drawing.Point(0, 115);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(314, 231);
             this.panel4.TabIndex = 1;
@@ -363,7 +363,7 @@
             // 
             this.panel3.Controls.Add(this.groupBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 557);
+            this.panel3.Location = new System.Drawing.Point(0, 346);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(314, 264);
             this.panel3.TabIndex = 0;
@@ -738,7 +738,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(729, 821);
+            this.panel2.Size = new System.Drawing.Size(631, 610);
             this.panel2.TabIndex = 1;
             // 
             // canvas
@@ -759,7 +759,7 @@
             this.canvas.ShowJumps = false;
             this.canvas.ShowMarkingDirection = false;
             this.canvas.ShowRuler = true;
-            this.canvas.Size = new System.Drawing.Size(620, 627);
+            this.canvas.Size = new System.Drawing.Size(522, 416);
             this.canvas.TabIndex = 38;
             // 
             // panel6
@@ -778,9 +778,9 @@
             this.panel6.Controls.Add(this.label25);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(109, 627);
+            this.panel6.Location = new System.Drawing.Point(109, 416);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(620, 194);
+            this.panel6.Size = new System.Drawing.Size(522, 194);
             this.panel6.TabIndex = 1;
             // 
             // labcutter
@@ -972,7 +972,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(109, 821);
+            this.panel5.Size = new System.Drawing.Size(109, 610);
             this.panel5.TabIndex = 0;
             // 
             // toolStrip2
@@ -1007,7 +1007,7 @@
             this.btnsave});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(106, 821);
+            this.toolStrip2.Size = new System.Drawing.Size(106, 610);
             this.toolStrip2.TabIndex = 32;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -1271,7 +1271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 821);
+            this.ClientSize = new System.Drawing.Size(945, 610);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Scanner";

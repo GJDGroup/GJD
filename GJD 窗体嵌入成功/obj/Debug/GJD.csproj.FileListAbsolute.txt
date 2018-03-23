@@ -229,13 +229,8 @@ E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\bin\Debug\Gsi.Framework.dll
 E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\bin\Debug\Cti.Hardware.ScanDevice.ScanInterface.dll
 E:\blog\NewGjdMdi\20180312\GJD 窗体嵌入成功\obj\Debug\GJD.csprojResolveAssemblyReference.cache
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\bin\Debug\GJD.exe.config
-E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.exe
-E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.pdb
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\bin\Debug\GJD.exe
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\bin\Debug\GJD.pdb
-E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\bin\Debug\Gsi.Framework.dll
-E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\bin\Debug\Cti.Hardware.ScanDevice.ScanInterface.dll
-E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.csprojResolveAssemblyReference.cache
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.ArcInsertDialog.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.CircleInsertDialog.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.cuttercompensationDialog.resources
@@ -243,6 +238,7 @@ E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.Database
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.Laser.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.LineInsertingDialog.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.MachParas.resources
+E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.MachResults.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.MachResultsPower.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.mainForm.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.MoveShapeDialog.resources
@@ -255,4 +251,5 @@ E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.Paramete
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.Properties.Resources.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.SetOffseDialogt.resources
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.csproj.GenerateResource.Cache
-E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.MachResults.resources
+E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.exe
+E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.pdb

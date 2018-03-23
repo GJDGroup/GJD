@@ -218,7 +218,7 @@ namespace GJD
         }
         public void ConnectScanner1()//连接设备
         {
-            connectstatus = 0;
+            connectstatus = 2;
         }
         public void SetOffset(float x, float y)//设置原点偏置
         {

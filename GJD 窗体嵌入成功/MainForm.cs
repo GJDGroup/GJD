@@ -63,11 +63,11 @@ namespace GJD
 
         //窗体预生成函数
         public void GenerateForm(string form, int i)
-        {
+        {  
             //反射生成窗体
             string strName = form;
-            Form fm=null;
-            fm = (Form)Assembly.GetExecutingAssembly().CreateInstance(form);                               
+            Form fm = null;
+            fm = (Form)Assembly.GetExecutingAssembly().CreateInstance(form);
             //if (strName == "GJD.Scanner")
             //{
             //    Assembly ass = Assembly.LoadFrom("振镜新版.exe");
@@ -150,13 +150,10 @@ namespace GJD
                     buttonrun.Enabled = false;
                     initmain();
                     break;
-                case "暂停加工":                   
-                    cuttentpause = currentstatus;
-                    currentstatus = "stop";
+                case "暂停加工":
                     buttonrun.Enabled = true;
                     break;
-                case "继续加工":                    
-                    currentstatus = cuttentpause;
+                case "继续加工":
                     buttonrun.Enabled = true;
                     break;
                 default:
@@ -210,7 +207,7 @@ namespace GJD
         #region 控制参数
         ///控制参数
         //视觉测量运动 cv840Dmotion，由用户定义
-        public static Dictionary<int, double[]> cv840Dmotion = new Dictionary<int,double[]>();
+        public static Dictionary<int, double[]> cv840Dmotion = new Dictionary<int, double[]>();
         public static Dictionary<int, double[]> recv840Dmotion = new Dictionary<int, double[]>();
         //视觉测量单次运动标志
         public static int cvCount = 0;
@@ -247,333 +244,432 @@ namespace GJD
         I840D i840d { get; set; }
         IMachParahandle iMachParahandle { get; set; }
         IScan iscan { get; set; }
-       //当前加工状态
-        string currentstatus;
-        string cuttentpause;
+
+        //加工状态
+        public int RunStep_Free = 0;       //空闲状态
+        public int RunStep_CvMeasure840DMotion = 2;//视觉测量机床定位
+        public int RunStep_CvMeasurePhotograph = 4;//视觉测量拍照
+        public int RunStep_CharaStrucDataReceive = 6;//特征结构加工数据接收
+        public int RunStep_CharaStrucG = 8;//特征结构加工G指令转换
+        public int RunStep_CharaStruc840DMotion = 10;//特征结构加工机床定位
+        public int RunStep_CharaStrucScanMotion = 12;//特征结构加工振镜扫描
+        public int RunStep_EdgeStrucDataReceive = 14;//接收边缘特征的测量数据
+        public int RunStep_EdgeStrucG = 16;//边缘测量数据转G代码
+        public int RunStep_EdgeStrucLaserOn = 18;//边缘加工激光器出光
+        public int RunStep_EdgeStruc840DMotion = 20;//边缘加工机床走G代码
+        public int RunStep_EdgeStrucLaserClose = 22;//边缘加工激光器关
+        public int RunStep_ReCvMeasure840DMotion = 24;//复检机床定位
+        public int RunStep_ReCvMeasurePhotograph = 26;//复检拍照
+        public int RunStep_ReCvMeasureResult = 28;//复检结果接收
+        public int RunStep_Ref = 64;//机床回参考点
+        //当前加工状态
+        int currentstatus = 0;
         #endregion
 
         #region 控制逻辑
         private void timermain_Tick(object sender, EventArgs e)
         {
             //系统各部分状态
-            //激光器部分
             switch (currentstatus)
             {
-                #region 初始化
-                case "init":
-                    currentstatus = "inited";
-                    //执行子系统初始化操作
-                    //激光器初始化
-                    Thread tdlaser = new Thread(ilaser.InitLaserConnFun);
-                    tdlaser.Start();                   
-                    //视觉测量系统初始化
-                    Thread tdcvinit = new Thread(icv.CvMeasureInit);
-                    tdcvinit.Start();                  
-                    //振镜初始化  
-                     Thread tdscnainit = new Thread(iscan.ConnectScanner1);
-                     tdscnainit.Start();
-                break;
-                #endregion
                 #region 视觉测量
-                case "CvMeasure840DMotion":
-                    currentstatus = "CvMeasure840DMotioned";                   
-                    Thread td840 = new Thread(i840d.Sen840Dmotion);
-                    td840.Start(cv840Dmotion[cvCount]);                   
+                case 1:
+                    if (!(RunStep_CvMeasure840DMotion % 2 == 0))
+                    {
+                        i840d.Sen840Dmotion(cv840Dmotion[cvCount]);
+                        RunStep_CvMeasure840DMotion++;
+                    }
+                    else
+                    {
+                        if (Sen840D.sen840DHasMotion == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + cvCount.ToString() + "次" + "机床准备定位");
+                        }
+                        if (Sen840D.sen840DHasMotion == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + cvCount.ToString() + "次" + "机床定位中");
+                        }
+                        if (Sen840D.sen840DHasMotion == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + cvCount.ToString() + "次" + "机床定位完成");
+                            RunStep_CvMeasurePhotograph--;
+                            currentstatus = RunStep_CvMeasurePhotograph;
+                        }
+                    }
                     break;
-                case "CvMeasurePhotograph":
-                    currentstatus = "CvMeasurePhotographed";                    
-                    Thread tdphoto = new Thread(icv.CvPhotograph);
-                    tdphoto.Start();                  
+                case 3:
+                    if (!(RunStep_CvMeasurePhotograph % 2 == 0))
+                    {
+                        icv.CvPhotograph();
+                        RunStep_CvMeasurePhotograph = RunStep_CvMeasurePhotograph + 1;
+                    }
+                    else
+                    {
+                        if (CvMeasure.cvHasMeasure == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + cvCount.ToString() + "次" + "相机准备拍照");
+                        }
+                        if (CvMeasure.cvHasMeasure == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + cvCount.ToString() + "次" + "相机拍照中");
+                        }
+                        if (CvMeasure.cvHasMeasure == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + cvCount.ToString() + "次" + "相机拍照完成");
+                            if (!(cvCount == cvCountotal - 1))
+                            {
+                                RunStep_CvMeasure840DMotion--;
+                                currentstatus = RunStep_CvMeasure840DMotion;
+                                cvCount += 1;
+                            }
+                            else
+                            {
+                                RunStep_CharaStrucDataReceive--;
+                                currentstatus = RunStep_CharaStrucDataReceive;
+                                //恢复区域计数器
+                                cvCount = 0;
+                            }
+                        }
+                    }
                     break;
-                case "Ref":
-                    currentstatus = "Refed";                    
-                    Thread tdref = new Thread(i840d.Sen840Dmotion);
-                    tdref.Start(coorref);
-                    break;
-                #endregion
+                #endregion 视觉测量
                 #region 特征结构加工
-                case "CharaStrucDataReceive":
-                    currentstatus = "CharaStrucDataReceiveed";                    
-                    Thread tdcharec = new Thread(icv.CvCharacDataReceive);
-                    tdcharec.Start(characnum);
+                //数据接收
+                case 5:
+                    if (!(RunStep_CharaStrucDataReceive % 2 == 0))
+                    {
+                        icv.CvCharacDataReceive(characnum);
+                        RunStep_CharaStrucDataReceive++;
+                    }
+                    else
+                    {
+                        if (CvMeasure.cvCharacDataHasReceive == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域数据准备接收");
+                        }
+                        if (CvMeasure.cvCharacDataHasReceive == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域数据正在接收");
+                        }
+                        if (CvMeasure.cvCharacDataHasReceive == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域数据接收完成");
+                            RunStep_CharaStrucG--;
+                            currentstatus = RunStep_CharaStrucG;
+                        }
+                    }
                     break;
-                case "CharaStrucG":
-                    currentstatus = "CharaStrucGed";                   
-                    Thread tdchag = new Thread(i840d.CharaStrucG);
-                    tdchag.Start(characnum);                    
+                //G指令转换
+                case 7:
+                    if (!(RunStep_CharaStrucG % 2 == 0))
+                    {
+                        i840d.CharaStrucG(characnum);
+                        RunStep_CharaStrucG++;
+                    }
+                    else
+                    {
+                        if (Sen840D.charaStrucHasG == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域G指令准备转换");
+                        }
+                        if (Sen840D.charaStrucHasG == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域G指令正在转换");
+                        }
+                        if (Sen840D.charaStrucHasG == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域G指令转换完成");
+                            RunStep_CharaStruc840DMotion--;
+                            currentstatus = RunStep_CharaStruc840DMotion;
+                        }
+                    }
                     break;
-                case "CharaStruc840DMotion":
-                    currentstatus = "CharaStruc840DMotioned";                   
-                    Thread tdcha840 = new Thread(i840d.Sen840Dmotion);
-                    tdcha840.Start(coorcharac);
+                //机床定位
+                case 9:
+                    if (!(RunStep_CharaStruc840DMotion % 2 == 0))
+                    {
+                        i840d.Sen840Dmotion(coorcharac);
+                        RunStep_CharaStruc840DMotion++;
+                    }
+                    else
+                    {
+                        if (Sen840D.sen840DHasMotion == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域机床准备完成");
+                        }
+                        if (Sen840D.sen840DHasMotion == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域机床正在");
+                        }
+                        if (Sen840D.sen840DHasMotion == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域机床定位完成");
+                            RunStep_CharaStrucScanMotion--;
+                            currentstatus = RunStep_CharaStrucScanMotion;
+                        }
+                    }
                     break;
-                case "CharaStrucScanMotion":
-                    currentstatus = "CharaStrucScanMotioned";
-                    Thread tdscan = new Thread(iscan.Scan);
-                    tdscan.Start(characnum);
-                    break;
-                case "CharacRef":
-                    currentstatus="CharacRefed";                  
-                    Thread tdcharacref = new Thread(i840d.Sen840Dmotion);
-                    tdcharacref.Start(coorref);
+                //振镜扫描
+                case 11:
+                    if (!(RunStep_CharaStrucScanMotion % 2 == 0))
+                    {
+                        iscan.Scan(characnum);
+                        RunStep_CharaStrucScanMotion++;
+                    }
+                    else
+                    {
+                        if (Scanner.scanstatus == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域机床准备扫描");
+                        }
+                        if (Scanner.scanstatus == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域振镜正在扫描");
+                        }
+                        if ((Scanner.scanstatus == 2))
+                        {
+                            iMachParahandle.richboxshow("第" + characnum.ToString() + "个区域振镜扫描完成");
+                            if (!(characnum == charactalnum))
+                            {
+                                RunStep_CharaStrucDataReceive--;
+                                currentstatus = RunStep_CharaStrucDataReceive;
+                                characnum += 1;
+                            }
+                            else
+                            {
+                                RunStep_EdgeStrucDataReceive--;
+                                currentstatus = RunStep_EdgeStrucDataReceive;
+                                //恢复区域计数器
+                                characnum = 1;
+                            }
+                        }
+                    }
                     break;
                 #endregion
                 #region 边缘加工
-                case "EdgeStrucDataReceive":
-                    currentstatus = "EdgeStrucDataReceived";                   
-                    Thread tdedgeR = new Thread(icv.CvEdgeStrucDataReceive);
-                    tdedgeR.Start(edgecnum);                    
-                    break;
-                case "EdgeStrucG":
-                    currentstatus = "EdgeStrucGed";                   
-                    Thread tdedgeG = new Thread(i840d.EdgeStrucG);
-                    tdedgeG.Start(edgecnum);                  
-                    break;
-                case "EdgeStrucLaserOn":
-                    currentstatus = "EdgeStrucLaserOned";                  
-                    Thread tdedgelaser = new Thread(ilaser.LaserOn);
-                    tdedgelaser.Start();                    
-                    break;
-                case "EdgeStruc840DMotion":
-                    currentstatus = "EdgeStruc840DMotioned";                    
-                    Thread tdedge840 = new Thread(i840d.EdgeStruc840DMachine);
-                    tdedge840.Start(edgecnum);
-                    break;
-                case "EdgeRef":
-                    currentstatus="EdgeRefed";                  
-                    Thread tdedgecref = new Thread(i840d.Sen840Dmotion);
-                    tdedgecref.Start(coorref);
-                    break;
-                #endregion
-                #region 复检
-                case "ReCvMeasure840DMotion":
-                    currentstatus = "ReCvMeasure840DMotioned";                 
-                    Thread retd840 = new Thread(i840d.Sen840Dmotion);
-                    retd840.Start(recv840Dmotion[recvCount]);
-                    break;
-                case "ReCvMeasurePhotograph":
-                    currentstatus = "ReCvMeasurePhotographed";                    
-                    Thread retdphoto = new Thread(icv.CvPhotograph);
-                    retdphoto.Start();                  
-                    break;
-                case "ReCVRef":
-                    currentstatus = "ReCVRefed";                  
-                    Thread tdReCVref = new Thread(i840d.Sen840Dmotion);
-                    tdReCVref.Start(coorref);
-                    break;
-                #endregion
-            }
-        }
-        private void timersub_Tick(object sender, EventArgs e)
-        {
-            switch (currentstatus)
-            {
-                #region 初始化
-                case "inited":
-                    if (Laser.laserHasinit)
+                //边缘数据接收
+                case 13:
+                    if (!(RunStep_EdgeStrucDataReceive % 2 == 0))
                     {
-                        ///激光器初始化成功
-                        iMachParahandle.richboxshow("激光器初始化成功");                       
-                    }                   
-                    if (CvMeasure.cvMeasureHasinit)
-                    {
-                        ///视觉测量初始化成功
-                        iMachParahandle.richboxshow("视觉测量初始化");
+                        icv.CvEdgeStrucDataReceive(edgecnum);
+                        RunStep_EdgeStrucDataReceive++;
                     }
-                    if (Scanner.connectstatus==0)
+                    else
                     {
-                        ///扫描振镜初始化成功
-                        iMachParahandle.richboxshow("扫描振镜初始化成功");
+                        if (CvMeasure.cvEdgeStrucDataHasReceive == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "条边缘数据准备接收");
+                        }
+                        if (CvMeasure.cvEdgeStrucDataHasReceive == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "条边缘数据正在接收");
+                        }
+                        if (CvMeasure.cvEdgeStrucDataHasReceive == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "条边缘数据接收完成");
+                            RunStep_EdgeStrucG--;
+                            currentstatus = RunStep_EdgeStrucG;
+                        }
                     }
+                    break;
+                //边缘G代码转换
+                case 15:
+                    if (!(RunStep_EdgeStrucG % 2 == 0))
+                    {
+                        i840d.EdgeStrucG(edgecnum);
+                        RunStep_EdgeStrucG++;
+                    }
+                    else
+                    {
+                        if (Sen840D.edgeStrucHasG == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "条边缘G代码准备转换");
+                        }
+                        if (Sen840D.edgeStrucHasG == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "条边缘G代码正在转换");
+                        }
+                        if (Sen840D.edgeStrucHasG == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "条边缘G代码转换完成");
+                            RunStep_EdgeStrucLaserOn--;
+                            currentstatus = RunStep_EdgeStrucLaserOn;
+                        }
+                    }
+                    break;
+                //开激光器
+                case 17:
+                    if (!(RunStep_EdgeStrucLaserOn % 2 == 0))
+                    {
+                        ilaser.LaserOn();
+                        RunStep_EdgeStrucLaserOn++;
+                    }
+                    else
+                    {
+                        if (Laser.laserHasOn == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘加工激光准备开");
+                        }
+                        if (Laser.laserHasOn == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘加工激光器正在打开");
+                        }
+                        if (Laser.laserHasOn == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘加工激光器开");
+                            RunStep_EdgeStruc840DMotion--;
+                            currentstatus = RunStep_EdgeStruc840DMotion;
+                        }
+                    }
+                    break;
+                //机床加工
+                case 19:
+                    if (!(RunStep_EdgeStruc840DMotion % 2 == 0))
+                    {
+                        i840d.EdgeStruc840DMachine(edgecnum);
+                        RunStep_EdgeStruc840DMotion++;
+                    }
+                    else
+                    {
+                        if (Sen840D.sen840DHasEdgemachine == 0)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘机床准备加工");
+                        }
+                        if (Sen840D.sen840DHasEdgemachine == 1)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘机床正在加工");
+                        }
+                        if (Sen840D.sen840DHasEdgemachine == 2)
+                        {
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘机床加工完成");                         
+                                RunStep_EdgeStrucLaserClose--;
+                                currentstatus = RunStep_EdgeStrucLaserClose;                                                     
+                        }
 
-                    if (Laser.laserHasinit & CvMeasure.cvMeasureHasinit & (Scanner.connectstatus == 0))
-                    {
-                        //系统初始化完成
-                        iMachParahandle.richboxshow("系统初始化完成");
-                        currentstatus = "CvMeasure840DMotion";
                     }
                     break;
-
-                #endregion
-                #region 视觉测量
-                case "CvMeasure840DMotioned":
-                    if (Sen840D.sen840DHasMotion)
+                //关激光器
+                case 21:
+                    if (!(RunStep_EdgeStrucLaserClose % 2 == 0))
                     {
-                        Sen840D.sen840DHasMotion = false;
-                        iMachParahandle.richboxshow("第"+cvCount.ToString()+"次"+"840D定位完成");
-                        currentstatus = "CvMeasurePhotograph";
+                        ilaser.LaserClose();
+                        RunStep_EdgeStrucLaserClose++;
                     }
-                    break;
-                case "CvMeasurePhotographed":
-                    if (CvMeasure.cvHasMeasure)
+                    else
                     {
-                        CvMeasure.cvHasMeasure = false;
-                        iMachParahandle.richboxshow("第"+cvCount.ToString()+"次"+"拍照完成");
-                        if (!(cvCount == cvCountotal-1))
+                        if (Laser.lasercHaslose == 0)
                         {
-                            currentstatus = "CvMeasure840DMotion";
-                            cvCount += 1;
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘加工激光准备关");
                         }
-                        else
+                        if (Laser.lasercHaslose == 1)
                         {
-                            currentstatus = "Ref";
-                            //恢复区域计数器
-                            cvCount = 0;
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘加工激光器正在关闭");
                         }
-                    }
-                    break;
-                case "Refed":
-                    if (Sen840D.sen840DHasMotion)
-                    {
-                        Sen840D.sen840DHasMotion = false;
-                        currentstatus = "CharaStrucDataReceive";
-                    }
-                    break;
-                #endregion
-                #region 特征结构加工
-                case "CharaStrucDataReceiveed":
-                    if (CvMeasure.cvCharacDataHasReceive)
-                    {
-                        CvMeasure.cvCharacDataHasReceive = false;
-                        iMachParahandle.richboxshow("第"+characnum.ToString()+"个区域特征结构数据接收完成");
-                        currentstatus = "CharaStrucG";
-                    }
-                    break;
-                case "CharaStrucGed":
-                    if (Sen840D.charaStrucHasG)
-                    {
-                        Sen840D.charaStrucHasG = false;
-                        iMachParahandle.richboxshow("特征区域"+characnum.ToString() + "G指令转换完成");
-                        currentstatus = "CharaStruc840DMotion";
-                    }
-                    break;
-                case "CharaStruc840DMotioned":
-                    if (Sen840D.sen840DHasMotion)
-                    {
-                        Sen840D.sen840DHasMotion = false;
-                        iMachParahandle.richboxshow("特征区域" + characnum.ToString() + "机床定位完成");
-                        currentstatus = "CharaStrucScanMotion";
-                    }
-                    break;
-                case "CharaStrucScanMotioned":
-                    if ((Scanner.scanstatus==2))
-                    {
-                        Scanner.scanstatus = 0;
-                        iMachParahandle.richboxshow("特征区域" + characnum.ToString() + "扫描振镜扫描完成");
-                        if (!(characnum == charactalnum))
+                        if (Laser.lasercHaslose == 2)
                         {
-                            currentstatus = "CharaStrucDataReceive";
-                            characnum += 1;
-                        }
-                        else
-                        {
-                            currentstatus = "CharacRef";
-                            //恢复区域计数器
-                            characnum = 1;
-                        }
-                    }
-                    break;
-                case "CharacRefed":
-                    if (Sen840D.sen840DHasMotion)
-                    {
-                        Sen840D.sen840DHasMotion = false;
-                        iMachParahandle.richboxshow("特征区域加工完成，机床回参考点");
-                        currentstatus = "EdgeStrucDataReceive";
-                    }
-                    break;
-
-                #endregion
-                #region 边缘加工
-                case "EdgeStrucDataReceived":
-                    if (CvMeasure.cvEdgeStrucDataHasReceive)
-                    {
-                        CvMeasure.cvEdgeStrucDataHasReceive = false;
-                        iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘数据接收完成");
-                        currentstatus = "EdgeStrucG";
-                    }
-                    break;
-                case "EdgeStrucGed":
-                    if (Sen840D.edgeStrucHasG)
-                    {
-                        Sen840D.edgeStrucHasG = false;
-                        iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘G代码转换完成");
-                        currentstatus = "EdgeStrucLaserOn";
-                    }
-                    break;
-                case "EdgeStrucLaserOned":
-                    if (Laser.laserHasOn)
-                    {
-                        Laser.laserHasOn = false;
-                        iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘加工激光器开");
-                        currentstatus = "EdgeStruc840DMotion";
-                    }
-                    break;
-                case "EdgeStruc840DMotioned":
-                    if (Sen840D.sen840DHasEdgemachine)
-                    {
-                        Sen840D.sen840DHasEdgemachine = false;
-                        iMachParahandle.richboxshow("边缘" + edgecnum.ToString()+"机床加工完成");
-                        if (!(edgecnum == edgectalnum))
-                        {                          
+                            iMachParahandle.richboxshow("第" + edgecnum.ToString() + "个边缘加工激光器关");
+                            if (!(edgecnum == edgectalnum))
+                            {
                                 edgecnum += 1;
-                                currentstatus = "EdgeStrucDataReceive";                                   
-                        }
-                        else
-                        {
-                            currentstatus = "EdgeRef";
-                            //恢复区域计数器
-                            edgecnum = 1;
+                                RunStep_EdgeStrucDataReceive--;
+                                currentstatus = RunStep_EdgeStrucDataReceive;
+                            }
+                            else
+                            {
+                                RunStep_ReCvMeasure840DMotion--;
+                                currentstatus = RunStep_ReCvMeasure840DMotion;
+                                //恢复区域计数器
+                                edgecnum = 1; 
+                            }
                         }
                     }
-                    
                     break;
-                case "EdgeRefed":
-                    if (Sen840D.sen840DHasMotion)
-                    {
-                        Sen840D.sen840DHasMotion = false;
-                        iMachParahandle.richboxshow("机床回参考点");
-                        currentstatus = "ReCvMeasure840DMotion";
-                    }
-                    break;
-
                 #endregion
                 #region 复检
-                case "ReCvMeasure840DMotioned":
-                    if (Sen840D.sen840DHasMotion)
+                //定位
+                case 23:
+                    if (!(RunStep_ReCvMeasure840DMotion % 2 == 0))
                     {
-                        Sen840D.sen840DHasMotion = false;
-                        iMachParahandle.richboxshow("复检第"+recvCount.ToString()+"机床定位完成");
-                        currentstatus = "ReCvMeasurePhotograph";
+                        i840d.Sen840Dmotion(recv840Dmotion[recvCount]);
+                        RunStep_ReCvMeasure840DMotion++;
+                    }
+                    else
+                    {
+                        if (Sen840D.sen840DHasMotion == 0)
+                        {
+                            iMachParahandle.richboxshow("复检第" + recvCount.ToString() + "次机床准备定位");
+                        }
+                        if (Sen840D.sen840DHasMotion == 1)
+                        {
+                            iMachParahandle.richboxshow("复检第" + recvCount.ToString() + "次机床正在定位");
+                        }
+                        if (Sen840D.sen840DHasMotion == 2)
+                        {
+                            iMachParahandle.richboxshow("复检第" + recvCount.ToString() + "次机床定位完成");
+                            RunStep_ReCvMeasurePhotograph--;
+                            currentstatus = RunStep_ReCvMeasurePhotograph;
+                        }
                     }
                     break;
-                case "ReCvMeasurePhotographed":
-                    if (CvMeasure.cvHasMeasure)
+                //拍照
+                case 25:
+                    if (!(RunStep_ReCvMeasurePhotograph % 2 == 0))
                     {
-                        CvMeasure.cvHasMeasure = false;
-                        iMachParahandle.richboxshow("复检第" + recvCount.ToString() + "拍照完成");
-                        if (!(recvCount == recvCountotal-1))
+                        icv.CvPhotograph();
+                        RunStep_ReCvMeasurePhotograph++;
+                    }
+                    else
+                    {
+                        if (CvMeasure.cvHasMeasure == 0)
                         {
-                            currentstatus = "ReCvMeasure840DMotion";
-                            recvCount += 1;
+                            iMachParahandle.richboxshow("复检第" + recvCount.ToString() + "次机床准备定位");
                         }
-                        else
+                        if (CvMeasure.cvHasMeasure == 1)
                         {
-                            currentstatus = "ReCVRef";
-                            recvCount = 0;
+                            iMachParahandle.richboxshow("复检第" + recvCount.ToString() + "次机床正在定位");
+                        }
+                        if (CvMeasure.cvHasMeasure == 2)
+                        {
+                            iMachParahandle.richboxshow("复检第" + recvCount.ToString() + "拍照完成");
+                            if (!(recvCount == recvCountotal - 1))
+                            {
+                                RunStep_ReCvMeasure840DMotion--;
+                                currentstatus = RunStep_ReCvMeasure840DMotion;
+                                recvCount += 1;
+                            }
+                            else
+                            {
+                                RunStep_ReCvMeasureResult--;
+                                currentstatus = RunStep_ReCvMeasureResult;
+                                recvCount = 0;
+                            }
                         }
                     }
                     break;
-                case "ReCVRefed":
-                    if (Sen840D.sen840DHasMotion)
+                //接收复检数据
+                case 27:
+                    if (!(RunStep_ReCvMeasureResult % 2 == 0))
                     {
-                        iMachParahandle.richboxshow("当前工件加工完成");
-                        currentstatus = "next";
-                        buttonrun.Enabled = true;
-                        timermain.Enabled = false;
-                        timersub.Enabled = false;
+                        icv.CvReMeasureResult();
+                        RunStep_ReCvMeasureResult++;
                     }
-                    //单个加工件加工完成-转下一个                    
-                    break;                
+                    else
+                    {
+                        if (CvMeasure.cvHasMeasureResult == 0)
+                        {
+                            iMachParahandle.richboxshow("复检结果准备接收");
+                        }
+                        if (CvMeasure.cvHasMeasureResult == 1)
+                        {
+                            iMachParahandle.richboxshow("复检结果正在接收");
+                        }
+                        if (CvMeasure.cvHasMeasureResult == 2)
+                        {
+                            iMachParahandle.richboxshow("复检结果接收完成");
+                            currentstatus = RunStep_Free;
+                        }
+                    }
+                    break;
                 #endregion
             }
         }
@@ -581,17 +677,23 @@ namespace GJD
         {
             ilaser = formlist[2] as Ilaser;
             icv = new CvMeasure();
-            i840d =formlist[3] as I840D;
-            iscan =formlist[1] as IScan;
-            iMachParahandle =formlist[0] as IMachParahandle;
+            i840d = formlist[3] as I840D;
+            iscan = formlist[1] as IScan;
+            iMachParahandle = formlist[0] as IMachParahandle;
             cvCountotal = 0;
             recvCountotal = 0;
-            CV840Dmotion();
-            timermain.Enabled = true;
-            timersub.Enabled = true;
-            currentstatus = "init";
-            iMachParahandle.richboxclear();
-           
+            CV840Dmotion();          
+            iMachParahandle.richboxclear(); 
+            if (initsys())
+            {
+                RunStep_CvMeasure840DMotion--;
+                currentstatus = RunStep_CvMeasure840DMotion;
+                timermain.Enabled = true;
+            }
+            else
+            {
+                return;
+            }
         }
         public void CV840Dmotion()
         {
@@ -601,18 +703,18 @@ namespace GJD
             XmlNode root = doc.SelectSingleNode("GJD");
             XmlNode cvpos = root.ChildNodes[0];
             XmlNode recvpos = root.ChildNodes[1];
-            foreach(XmlNode nd in cvpos.ChildNodes)
+            foreach (XmlNode nd in cvpos.ChildNodes)
             {
                 double[] pos = new double[5];
                 string[] nodetext = nd.InnerText.Split(',');
                 for (int i = 0; i < nodetext.Length; i++)
                 {
                     string a = nodetext[0];
-                    double b = double.Parse(a); 
-                    pos[i] = double.Parse(nodetext[i]);                   
+                    double b = double.Parse(a);
+                    pos[i] = double.Parse(nodetext[i]);
                 }
                 cv840Dmotion.Add(cvCountotal, pos);
-                cvCountotal += 1;               
+                cvCountotal += 1;
             }
             foreach (XmlNode nd in recvpos.ChildNodes)
             {
@@ -621,21 +723,73 @@ namespace GJD
                 for (int i = 0; i < nodetext.Length; i++)
                 {
                     pos[i] = double.Parse(nodetext[i]);
-                   
+
                 }
                 recv840Dmotion.Add(recvCountotal, pos);
                 recvCountotal += 1;
             }
 
-            XmlNode refnode =root.ChildNodes[2];
+            XmlNode refnode = root.ChildNodes[2];
             string[] noderef = refnode.InnerText.Split(',');
             for (int i = 0; i < noderef.Length; i++)
             {
                 coorref[i] = double.Parse(noderef[i]);
             }
         }
-        #endregion        
-      
+        public bool initsys()
+        {
+            //执行子系统初始化操作
+            //激光器初始化
+            ilaser.InitLaserConnFun();
+            //视觉测量系统初始化
+            icv.CvMeasureInit();
+            //振镜初始化  
+           iscan.ConnectScanner1();
+            if (Laser.laserHasinit == 2 & CvMeasure.cvMeasureHasinit == 2 & Scanner.scanstatus == 2)
+            {
+                iMachParahandle.richboxshow("系统初始化完成");
+                return true;
+            }
+            else
+            {
+                if (!(Laser.laserHasinit == 2))
+                {
+                    if (Laser.laserHasinit == 1)
+                    {
+                        iMachParahandle.richboxshow("激光器正在初始化");
+                    }
+                    else
+                    {
+                        iMachParahandle.richboxshow("激光器初始化失败");
+                    }
+                }
+                if (!(CvMeasure.cvMeasureHasinit == 2))
+                {
+                    if (CvMeasure.cvMeasureHasinit == 1)
+                    {
+                        iMachParahandle.richboxshow("视觉测量系统正在连接");
+                    }
+                    else
+                    {
+                        iMachParahandle.richboxshow("视觉测量系统连接失败");
+                    }
+                }
+                if (!(Scanner.scanstatus == 2))
+                {
+                    if (Scanner.scanstatus == 1)
+                    {
+                        iMachParahandle.richboxshow("振镜正在连接");
+                    }
+                    else
+                    {
+                        iMachParahandle.richboxshow("振镜连接失败");
+                    }
+                }
+                return false;
+            }
+        }
+        #endregion
+
     }
 }
 

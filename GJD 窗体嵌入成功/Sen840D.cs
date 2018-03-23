@@ -20,29 +20,29 @@ namespace GJD
     }
     public partial class Sen840D : Form, I840D
     {
-        public static bool sen840DHasMotion = false;
-        public static bool sen840DHasEdgemachine = false;
-        public static bool charaStrucHasG = false;
-        public static bool edgeStrucHasG = false;
+        public static int sen840DHasMotion = 0;  //0表示没执行指令，1表示指令执行中，2表示指令执行完
+        public static int sen840DHasEdgemachine = 0;
+        public static int charaStrucHasG = 0;
+        public static int edgeStrucHasG = 0;
         public void Sen840Dmotion(object a)
         {
             System.Threading.Thread.Sleep(1000);
-            sen840DHasMotion = true;
+            sen840DHasMotion = 2;
         }
         public void CharaStrucG(object a)
         {
             System.Threading.Thread.Sleep(1000);
-            charaStrucHasG = true;
+            charaStrucHasG = 2;
         }
         public void EdgeStrucG(object a)
         {
             System.Threading.Thread.Sleep(1000);
-            edgeStrucHasG = true; 
+            edgeStrucHasG = 2; 
         }
         public void EdgeStruc840DMachine(object a)
         {
             System.Threading.Thread.Sleep(1000);
-            sen840DHasEdgemachine = true; 
+            sen840DHasEdgemachine = 2; 
         }
         public Sen840D()
         {

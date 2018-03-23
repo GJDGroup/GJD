@@ -253,3 +253,4 @@ E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.SetOffse
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.csproj.GenerateResource.Cache
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.exe
 E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.pdb
+E:\blog\NewGjdMdi\20180319\git\GJD\GJD 窗体嵌入成功\obj\Debug\GJD.csprojResolveAssemblyReference.cache

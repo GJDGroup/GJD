@@ -57,10 +57,10 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label35.Location = new System.Drawing.Point(465, 8);
+            this.label35.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label35.Location = new System.Drawing.Point(555, 8);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(177, 20);
+            this.label35.Size = new System.Drawing.Size(172, 27);
             this.label35.TabIndex = 0;
             this.label35.Text = "陶瓷型芯加工结果";
             // 
@@ -71,16 +71,16 @@
             this.panel4.Controls.Add(this.label35);
             this.panel4.Location = new System.Drawing.Point(5, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1130, 40);
+            this.panel4.Size = new System.Drawing.Size(1292, 40);
             this.panel4.TabIndex = 43;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label38.Location = new System.Drawing.Point(480, 17);
+            this.label38.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label38.Location = new System.Drawing.Point(556, 9);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(76, 16);
+            this.label38.Size = new System.Drawing.Size(92, 27);
             this.label38.TabIndex = 48;
             this.label38.Text = "加工误差";
             // 
@@ -92,16 +92,16 @@
             this.panel1.Location = new System.Drawing.Point(5, 40);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1130, 46);
+            this.panel1.Size = new System.Drawing.Size(1292, 46);
             this.panel1.TabIndex = 61;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(585, 17);
+            this.label16.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label16.Location = new System.Drawing.Point(676, 9);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 16);
+            this.label16.Size = new System.Drawing.Size(43, 27);
             this.label16.TabIndex = 51;
             this.label16.Text = "um";
             // 
@@ -109,10 +109,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(562, 17);
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label2.Location = new System.Drawing.Point(646, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 16);
+            this.label2.Size = new System.Drawing.Size(24, 27);
             this.label2.TabIndex = 50;
             this.label2.Text = "0";
             // 
@@ -122,10 +122,10 @@
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.pictureBox60);
             this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(26, 103);
+            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.groupBox1.Location = new System.Drawing.Point(45, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(533, 732);
+            this.groupBox1.Size = new System.Drawing.Size(595, 732);
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "加工前";
@@ -134,7 +134,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 374);
+            this.pictureBox1.Location = new System.Drawing.Point(135, 374);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(337, 350);
             this.pictureBox1.TabIndex = 42;
@@ -143,10 +143,10 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.Location = new System.Drawing.Point(445, 505);
+            this.label20.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label20.Location = new System.Drawing.Point(501, 505);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 16);
+            this.label20.Size = new System.Drawing.Size(52, 27);
             this.label20.TabIndex = 41;
             this.label20.Text = "背面";
             // 
@@ -154,7 +154,7 @@
             // 
             this.pictureBox60.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pictureBox60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox60.Location = new System.Drawing.Point(79, 18);
+            this.pictureBox60.Location = new System.Drawing.Point(135, 18);
             this.pictureBox60.Name = "pictureBox60";
             this.pictureBox60.Size = new System.Drawing.Size(337, 350);
             this.pictureBox60.TabIndex = 31;
@@ -163,10 +163,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(429, 181);
+            this.label21.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label21.Location = new System.Drawing.Point(485, 181);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 16);
+            this.label21.Size = new System.Drawing.Size(52, 27);
             this.label21.TabIndex = 33;
             this.label21.Text = "正面";
             // 
@@ -176,10 +176,10 @@
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(565, 103);
+            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.groupBox2.Location = new System.Drawing.Point(699, 103);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(533, 732);
+            this.groupBox2.Size = new System.Drawing.Size(554, 732);
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "加工后";
@@ -188,7 +188,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(79, 374);
+            this.pictureBox2.Location = new System.Drawing.Point(117, 374);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(337, 350);
             this.pictureBox2.TabIndex = 42;
@@ -197,10 +197,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(445, 505);
+            this.label17.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label17.Location = new System.Drawing.Point(483, 505);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(42, 16);
+            this.label17.Size = new System.Drawing.Size(52, 27);
             this.label17.TabIndex = 41;
             this.label17.Text = "背面";
             // 
@@ -208,7 +208,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(79, 18);
+            this.pictureBox3.Location = new System.Drawing.Point(117, 18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(337, 350);
             this.pictureBox3.TabIndex = 31;
@@ -217,10 +217,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(429, 181);
+            this.label18.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label18.Location = new System.Drawing.Point(467, 181);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 16);
+            this.label18.Size = new System.Drawing.Size(52, 27);
             this.label18.TabIndex = 33;
             this.label18.Text = "正面";
             // 
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 856);
+            this.ClientSize = new System.Drawing.Size(1287, 800);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);

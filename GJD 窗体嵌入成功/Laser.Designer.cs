@@ -78,8 +78,8 @@
             this.butInfoClear = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -95,7 +95,7 @@
             // 
             this.butLaserOn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.butLaserOn.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butLaserOn.Location = new System.Drawing.Point(215, 26);
+            this.butLaserOn.Location = new System.Drawing.Point(11, 335);
             this.butLaserOn.Name = "butLaserOn";
             this.butLaserOn.Size = new System.Drawing.Size(130, 40);
             this.butLaserOn.TabIndex = 0;
@@ -113,7 +113,7 @@
             // 
             this.butLaserClose.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.butLaserClose.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butLaserClose.Location = new System.Drawing.Point(408, 26);
+            this.butLaserClose.Location = new System.Drawing.Point(11, 390);
             this.butLaserClose.Name = "butLaserClose";
             this.butLaserClose.Size = new System.Drawing.Size(130, 40);
             this.butLaserClose.TabIndex = 0;
@@ -529,7 +529,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(601, 26);
+            this.button1.Location = new System.Drawing.Point(11, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 40);
             this.button1.TabIndex = 20;
@@ -541,7 +541,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(794, 26);
+            this.button2.Location = new System.Drawing.Point(11, 482);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 40);
             this.button2.TabIndex = 21;
@@ -678,7 +678,7 @@
             this.groupBox7.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox7.Location = new System.Drawing.Point(8, 156);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1125, 617);
+            this.groupBox7.Size = new System.Drawing.Size(1125, 675);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
             this.groupBox7.Tag = "";
@@ -687,34 +687,33 @@
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox8.Controls.Add(this.textBox6);
+            this.groupBox8.Controls.Add(this.label11);
             this.groupBox8.Controls.Add(this.butLaserClose);
             this.groupBox8.Controls.Add(this.button2);
             this.groupBox8.Controls.Add(this.button1);
             this.groupBox8.Controls.Add(this.butLaserOn);
             this.groupBox8.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox8.Location = new System.Drawing.Point(8, 786);
+            this.groupBox8.Location = new System.Drawing.Point(1134, 9);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(1125, 98);
+            this.groupBox8.Size = new System.Drawing.Size(162, 822);
             this.groupBox8.TabIndex = 26;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "激光器控制";
             // 
-            // textBox6
+            // label11
             // 
-            this.textBox6.AllowDrop = true;
-            this.textBox6.Location = new System.Drawing.Point(56, 101);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 91);
-            this.textBox6.TabIndex = 22;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 284);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(112, 27);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "激光器控制";
             // 
             // Laser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(1144, 856);
+            this.ClientSize = new System.Drawing.Size(1287, 800);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox7);
@@ -783,7 +782,6 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox texLaserStatus;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button butInfoClear;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ColorDialog colorDialog1;
@@ -791,5 +789,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label11;
     }
 }
